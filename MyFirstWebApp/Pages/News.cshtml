@@ -1,0 +1,11 @@
+﻿@page
+@model MyFirstWebApp.Pages.NewsModel
+@{
+	<h1>Articles</h1>
+
+	@foreach (var news in Model.Items)
+	{
+		<h2>@news.Title</h2>
+		<p>@news.Description</p>
+	}
+}

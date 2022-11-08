@@ -1,0 +1,18 @@
+﻿@page
+@model MyFirstWebApp.Pages.PlayersModel
+@{
+   <h1>Players</h1>
+
+	<table class="table table-dark">
+        @foreach (var player in Model.AllPlayers)
+        {
+            <tr>
+                <td>@player.Id</td>
+                <td>@player.Name</td>
+                <td>@player.Team</td>
+            </tr>
+        }
+	</table>
+
+    <p>Random Number<a href="https://localhost:7175/RandomNumber"> Click Here For A Random Number</a></p>
+}

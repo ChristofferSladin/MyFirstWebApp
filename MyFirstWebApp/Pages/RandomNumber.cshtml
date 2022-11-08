@@ -1,0 +1,19 @@
+﻿@page
+@model MyFirstWebApp.Pages.RandomNumberModel
+@{
+	@if (Model.RandomNumber < 100000)
+	{
+		<h3>Litet nummer</h3>
+	}
+	@if (Model.RandomNumber >= 100000 && Model.RandomNumber <= 200000)
+	{
+		<h3>Ganska stort nummer</h3>
+	}
+	@if (Model.RandomNumber > 200000)
+	{
+		<h3>Stort nummer</h3>
+	}
+
+	<p>Players<a href="https://localhost:7175/Players"> Click Here For Players</a></p>
+
+}
