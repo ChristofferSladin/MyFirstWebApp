@@ -1,7 +1,10 @@
+using MyFirstWebApp.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddTransient<IKrisInfoService, KrisInfoService>(); // TESTAR
 
 var app = builder.Build();
 

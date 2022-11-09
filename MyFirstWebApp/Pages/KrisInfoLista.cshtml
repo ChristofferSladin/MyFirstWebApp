@@ -1,0 +1,23 @@
+﻿@page
+@model MyFirstWebApp.Pages.KrisInfoListaModel
+@{
+
+	<form method="post">
+
+		<input type="text" name="query" />
+		<button type="submit">Sök</button>
+
+		
+	</form>
+
+	@foreach (var news in Model.Items)
+	{
+		<li>
+			<a asp-page="/krisinfoarticle" asp-route-articleId="@news.Id">
+				<p>@news.Title</p>
+			</a>
+
+		</li>
+	}
+
+}
